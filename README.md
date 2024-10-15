@@ -1,2 +1,2 @@
-# bbangood
-bbangood project
+# BBangood PUB Project
+BBangood project
