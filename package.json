@@ -1,0 +1,19 @@
+{
+  "name": "bbangood",
+  "version": "1.0.0",
+  "description": "BBangood project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JJonghyuk/bbangood.git"
+  },
+  "scripts": {
+    "start": "node pc/dist/init.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "pug": "^3.0.3"
+  }
+}
