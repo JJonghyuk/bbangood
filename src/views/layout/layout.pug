@@ -4,5 +4,9 @@ html(lang="ko")
     title #{pageTitle} | #{siteName}
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    block scripts
   body
-    p 빵지도
+    include ../partials/header
+    section.contents
+      block content
+    include ../partials/footer
