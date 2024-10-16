@@ -1,9 +1,9 @@
 import express from "express"
 
-const rootRouter = express.Router();
+const userRouter = express.Router();
 
-rootRouter.get("/logout", (req, res) => {
+userRouter.get("/logout", (req, res) => {
   return res.render("logout")
 })
 
-export default rootRouter;
+export default userRouter;

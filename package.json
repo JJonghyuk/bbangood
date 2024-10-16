@@ -1,19 +1,21 @@
 {
-  "name": "bbangood",
+  "name": "pc_bbangood",
   "version": "1.0.0",
   "description": "BBangood project",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JJonghyuk/bbangood.git"
+    "url": "https://github.com/JJonghyuk/pc_bbangood.git"
   },
+  "type": "module",
   "scripts": {
-    "start": "node pc/dist/init.js"
+    "start": "node src/init.js"
   },
-  "keywords": [],
+  "homepage": "",
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.1",
+    "node-sass": "^9.0.0",
     "pug": "^3.0.3"
   }
 }
