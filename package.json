@@ -8,14 +8,22 @@
   },
   "type": "module",
   "scripts": {
-    "start": "node src/init.js"
+    "build-css": "sass src/scss:dist/css --no-source-map",
+    "build-html": "npx pug src/views -o dist/html",
+    "build": "npm run build-css && npm run build-html",
+    "start": "nodemon --exec node src/init.js"
   },
   "homepage": "",
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.1",
-    "node-sass": "^9.0.0",
-    "pug": "^3.0.3"
+    "node-sass": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "pug": "^3.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.80.2"
   }
 }
