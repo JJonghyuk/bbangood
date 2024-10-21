@@ -3,93 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퍼블리셔 작업현황</title>
+    <title>빵굿(BBangood) 작업현황</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-      .task-board {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        border: 1px solid #ddd;
-        background-color: #f9f9f9;
-      }
-      .task-board h1 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      .task {
-        border: 1px solid #ddd;
-        padding: 15px;
-        margin-bottom: 15px;
-        background-color: white;
-      }
-      .task .status {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 5px;
-        border-radius: 3px;
-      }
-
-      .task .status.completed {
-        background-color: #4CAF50;
-        color: white;
-      }
-      .task .status.in-progress {
-        background-color: #FFEB3B;
-      }
-      .task .status.not-started {
-        background-color: #F44336;
-        color: white;
-      }
-      .task .deadline,
-      .task .priority {
-        display: block;
-        margin-top: 5px;
-      }
-
-      .progress {
-        margin-top: 20px;
-        text-align: center;
-      }
-      .progress .progress-bar {
-        width: 100%;
-        height: 20px;
-        background-color: #ddd;
-        border-radius: 10px;
-        overflow: hidden;
-        margin-top: 10px;
-      }
-      .progress #progress-fill {
-        height: 100%;
-        background-color: #4CAF50;
-        width: 0;
-      }
-    </style>
 </head>
 <body>
-    <div class="task-board">
-        <h1>퍼블리셔 작업 현황</h1>
-        <div class="task" data-status="in-progress">
-            <h3>메인 페이지 퍼블리싱</h3>
-            <p>메인 페이지 레이아웃 작업</p>
-            <span class="status">진행 중</span>
-            <span class="deadline">마감일: 2024-10-30</span>
-            <span class="priority">우선순위: 높음</span>
-        </div>
-        <div class="task" data-status="completed">
-            <h3>서브 페이지 작업</h3>
-            <p>서브 페이지 디자인 적용</p>
-            <span class="status">완료</span>
-            <span class="deadline">마감일: 2024-11-05</span>
-            <span class="priority">보통</span>
-        </div>
-        <div class="progress">
-            <span>전체 진행률: <strong id="progress-percent">0%</strong></span>
-            <div class="progress-bar">
-                <div id="progress-fill"></div>
+    <div class="container">
+        <header>
+            <h1>빵굿(BBangood) 퍼블리싱 작업현황</h1>
+            <div class="task-progress">
+              <h2>작업 진행 현황</h2>
+              <div class="progress-summary">
+                <span id="wait-tasks">대기: <strong>0건 (0%)</strong></span>
+                <span id="ing-tasks">진행: <strong>0건 (0%)</strong></span>
+                <span id="complete-tasks">완료: <strong>0건 (0%)</strong></span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar" style="width: 0%;"></div>
+              </div>
             </div>
-        </div>
+        </header>
+        <section class="task-section">
+            <h2>GUIDE</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>no.</th>
+                        <th>메뉴명</th>
+                        <th>속성</th>
+                        <th>pageID</th>
+                        <th>url</th>
+                        <th>진행상황</th>
+                        <th>담당자</th>
+                        <th>완료날짜</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>디자인 가이드</td>
+                        <td>Page</td>
+                        <td>guide</td>
+                        <td><a href="#">html@guide/common.html</a></td>
+                        <td class="status wait" data-status="wait">대기</td>
+                        <td class="text-center">더미</td>
+                        <td class="text-center">24-10-10</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>디자인 가이드</td>
+                        <td>Page</td>
+                        <td>guide</td>
+                        <td><a href="#">html@guide/common.html</a></td>
+                        <td class="status ing" data-status="ing">진행중</td>
+                        <td class="text-center">더미</td>
+                        <td class="text-center">24-10-10</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>디자인 가이드</td>
+                        <td>Page</td>
+                        <td>guide</td>
+                        <td><a href="#">html@guide/common.html</a></td>
+                        <td class="status complete" data-status="complete">완료</td>
+                        <td class="text-center">더미</td>
+                        <td class="text-center">24-10-10</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 추가적인 섹션도 유사한 방식으로 구성 -->
     </div>
-    <script src="script.js"></script>
+    <script src="ui.js"></script>
 </body>
 </html>
